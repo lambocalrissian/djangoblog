@@ -12,7 +12,8 @@ class CategoryAdmin(admin.ModelAdmin):
     # Impacting the category form
 
     fields = ('name', 'description')
-    
+    exclude = ('posts',)
+
 
 class CategoryInline(admin.TabularInline):
     model = Post.categories.through
